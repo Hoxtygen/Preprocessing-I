@@ -2,36 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v17/TK3iWkUHHAIjg752GT8D.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Oswald SemiBold'), local('Oswald-SemiBold'), url(https://fonts.gstatic.com/s/oswald/v17/TK3hWkUHHAIjg75-xhsTus9H.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v17/TK3hWkUHHAIjg75-ohoTus9H.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v17/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
-}
 html,
 body,
 div,
@@ -160,6 +130,54 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v17/TK3iWkUHHAIjg752GT8D.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Oswald SemiBold'), local('Oswald-SemiBold'), url(https://fonts.gstatic.com/s/oswald/v17/TK3hWkUHHAIjg75-xhsTus9H.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v17/TK3hWkUHHAIjg75-ohoTus9H.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v17/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
+}
+.navul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.sectionContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.sectionHeading {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  position: relative;
+}
 p {
   margin-bottom: 1.3em;
   font-size: 1.2rem;
@@ -190,6 +208,20 @@ a {
 #wrapper {
   display: flex;
 }
+@media (max-width: 500px) {
+  #wrapper {
+    flex-direction: column;
+  }
+  #wrapper aside {
+    width: 100%;
+  }
+  #wrapper aside footer {
+    display: none;
+  }
+  #wrapper main {
+    width: 100%;
+  }
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -201,7 +233,7 @@ a {
   text-align: center;
 }
 aside {
-  width: 300px;
+  width: 20%;
   padding-top: 3em;
   padding-bottom: 3em;
   background-color: #f2f3f7;
@@ -257,7 +289,7 @@ aside nav ul li {
 aside nav ul li a {
   display: block;
   padding: 10px 0;
-  font-family: "Roboto Condensed";
+  font-family: 'Roboto Condensed';
 }
 aside footer {
   text-align: center;
@@ -265,9 +297,9 @@ aside footer {
   width: 100%;
 }
 aside footer ul {
-  padding: 0;
+  text-align: center;
   margin: 0;
-  list-style-type: none;
+  padding: 0;
 }
 aside footer ul li {
   display: inline;
@@ -278,46 +310,47 @@ aside footer ul li a {
   padding: 5px;
 }
 main {
-  width: calc(100% - 300px);
-  border: 1px solid blue;
+  width: 80%;
 }
-.section-container {
+main .section-container {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.hero {
+main .hero {
   min-height: 500px;
-  border: 1px solid red;
+  background-image: url("/images/cover_bg_1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
 }
-.hero .hero-content-container {
-  display: flex;
-}
-.hero .hero-content-container .intro {
+main .hero .hero-content-container .intro {
   height: 450px;
 }
-.hero .hero-content-container .intro h1 {
+main .hero .hero-content-container .intro h1 {
   margin-bottom: 20px;
   font-size: 3rem;
   line-height: 1.5;
   font-weight: 700;
 }
-.hero .hero-content-container .intro h2 {
+main .hero .hero-content-container .intro h2 {
   font-size: 1.3rem;
   line-height: 1.5;
   margin-bottom: 30px;
   font-weight: 300;
 }
-.hero-image-container {
-  background: green;
+main .hero-image-container {
+  width: 60%;
 }
-.about-container,
-.portfolio-container,
-.contact-info-container {
+main .about-container,
+main .portfolio-container,
+main .contact-info-container {
   padding: 0 2.5em;
 }
-.about-container .about-description,
-.portfolio-container .portfolio-header,
-.contact-header .contact-title {
+main .about-container .about-description,
+main .portfolio-container .portfolio-header,
+main .contact-header .contact-title {
   font-size: 1.5rem;
   margin-bottom: 3rem;
   font-weight: 700;
@@ -326,71 +359,71 @@ main {
   line-height: 1.8;
   position: relative;
 }
-.portfolio-container .skills h2 {
+main .portfolio-container .skills h2 {
   font-size: 1.5rem;
   padding: 10px;
 }
-.portfolio-container .skills ul {
+main .portfolio-container .skills ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.portfolio-container .skills ul li {
+main .portfolio-container .skills ul li {
   padding: 10px;
 }
-.portfolio-item-container {
+main .portfolio-item-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.portfolio-item-container .portfolio-item {
+main .portfolio-item-container .portfolio-item {
   min-width: 48%;
   margin-bottom: 20px;
   text-align: center;
 }
-.portfolio-item img {
+main .portfolio-item img {
   display: block;
   width: 100%;
 }
-.portfolio-item h3 {
+main .portfolio-item h3 {
   margin-top: 10px;
   padding: 10px 5px;
   font-size: 1.2rem;
 }
-#contact .contact-inner {
+main #contact .contact-inner {
   display: flex;
   justify-content: space-between;
 }
-#contact .contact-inner .address {
+main #contact .contact-inner .contact-inner .address {
   width: 38%;
 }
-#contact .contact-inner .address p {
+main #contact .contact-inner .contact-inner .address p {
   font-size: 1rem;
 }
-#contact .contact-inner .address span {
+main #contact .contact-inner #contact .contact-inner .address span {
   font-weight: 700;
 }
-#contact .contact-inner .form-container {
+main #contact .contact-inner .form-container {
   width: 58%;
 }
-.mb-10 {
+main .mb-10 {
   margin-bottom: 10px;
 }
-.mt-10 {
+main .mt-10 {
   margin-top: 10px;
 }
-.d-flex {
+main .d-flex {
   display: flex;
   justify-content: center;
 }
-.single-input input {
+main .single-input input {
   width: 100%;
   line-height: 40px;
   padding: 0 20px;
   background-color: #eee;
   border: none;
 }
-.single-input textarea {
+main .single-input textarea {
   width: 100%;
   line-height: 50px;
   padding: 0 20px;
@@ -399,7 +432,7 @@ main {
   background: #eee;
   outline: none;
 }
-.primary-btn {
+main .primary-btn {
   line-height: 40px;
   padding: 0 40px;
   background: #666;
