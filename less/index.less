@@ -57,6 +57,7 @@ table {
 
 p 	{
 	margin-bottom: 1.3em;
+	font-size: 1.2rem;
 }
 
 small 	{
@@ -83,8 +84,14 @@ a 	{
 
 #wrapper 	{
 	display: flex;
-	width: 960px;
-	margin: 0 auto;
+}
+
+.container      {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+	margin-left: auto;
+	width: 100%;
 }
 
 .text-center 	{
@@ -229,11 +236,11 @@ main 	{
 	// background-image: url("/images/img_bg_1.jpg");
 }
 
-.about-container, .portfolio-container 	{
+.about-container, .portfolio-container, .contact-info-container 	{
 	padding: 0  2.5em;
 }
 
-.about-container .about-description, .portfolio-container .portfolio-header 	{
+.about-container .about-description, .portfolio-container .portfolio-header, .contact-header .contact-title 	{
 	font-size: 1.5rem;
 	margin-bottom: 3rem;
 	font-weight: 700;
@@ -244,7 +251,6 @@ main 	{
 }
 
 .portfolio-container .skills h2	{
-	border: 1px solid pink;
 	font-size: 1.5rem;
 	padding: 10px;
 	
@@ -261,15 +267,15 @@ main 	{
 }
 
 .portfolio-item-container   {
-	border: 1px solid blue;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
   }
   
   .portfolio-item-container  .portfolio-item  {
-	border: 1px solid maroon;
-	min-width: 45%;
+	min-width: 48%;
+	margin-bottom: 20px;
+	text-align: center;
   }
 
 
@@ -277,3 +283,102 @@ main 	{
 	  display: block;
 	  width: 100%;
   }
+
+  .portfolio-item h3 	{
+	  margin-top: 10px;
+	  padding: 10px 5px;
+	  font-size: 1.2rem;
+  }
+
+  #contact .contact-inner 	{
+	  display: flex;
+	  justify-content: space-between;
+  }
+
+  #contact .contact-inner .address 	{
+	  width: 38%;
+  }
+
+  #contact .contact-inner .address p 	{
+	  font-size: 1rem;
+  }
+
+  #contact .contact-inner .address span 	{
+	  font-weight: 700;
+  }
+
+  #contact .contact-inner .form-container 	{
+	  width: 58%
+  }
+
+  
+// mb-10 -margin-botoom:10px
+.mb-10 	{
+	margin-bottom: 10px;
+}
+
+// mt-10 - margin-top: 10px
+.mt-10 	{
+	margin-top: 10px;
+}
+
+//d-flex- display:flex
+.d-flex 	{
+	display: flex;
+	justify-content: center;
+}
+
+.single-input input 	{
+	width: 100%;
+	line-height: 40px;
+	padding: 0 20px;
+	background-color: #eee;
+	border: none;
+}
+
+.single-input textarea {
+    width: 100%;
+    line-height: 50px;
+    padding: 0 20px;
+    height: 140px;
+    resize: none;
+	background: #eee;
+	outline: none;
+}
+
+.primary-btn {
+    line-height: 40px;
+    padding: 0 40px;
+    background: #666;
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+	cursor: pointer;
+	width: 100%;
+}
+
+
+  @media (min-width: 576px) {
+    .container {
+	  max-width: 540px; 
+		}
+	 }
+  @media (min-width: 768px) {
+    .container {
+	  max-width: 760px;
+	 } 
+	}
+  @media (min-width: 992px) {
+    .container {
+	  max-width: 960px; 
+	} 
+}
+  @media (min-width: 1200px) {
+    .container {
+	  max-width: 1140px; 
+	} 
+}
