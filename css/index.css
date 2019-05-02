@@ -221,6 +221,15 @@ a {
   #wrapper main {
     width: 100%;
   }
+  #wrapper #contact .contact-inner {
+    flex-direction: column;
+  }
+  #wrapper #contact .contact-inner .address {
+    width: 100%;
+  }
+  #wrapper #contact .contact-inner .form-container {
+    width: 100%;
+  }
 }
 .container {
   padding-right: 15px;
